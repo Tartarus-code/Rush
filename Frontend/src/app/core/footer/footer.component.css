@@ -1,20 +1,36 @@
-footer h4, footer p, footer ul {
-    margin-bottom: 10px;
-  }
-  
-  footer ul p {
-    font-weight: bold;
-  }
-  
-  footer ul li {
-    margin-bottom: 5px;
-  }
-
 .copyright {
     color: white;
     opacity: 50%;
 }
 
-.brand, .devise {
-    font-family: 'Harabara', sans-serif;
+
+.brand {
+  font-size: 8vh;
+  font-family: 'Harabara', sans-serif;
+  color: black;
+  width: fit-content;
+}
+
+.lightning {
+  position: absolute;
+  font-size: 30px;
+}
+
+.logo > a {
+  color: grey;
+  font-size: 3vh;
+  padding: 1vh;
+}
+
+.logo > a:hover {
+  color: black;
+}
+
+a {
+  color: black;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: black;
 }

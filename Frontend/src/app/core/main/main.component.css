@@ -2,3 +2,13 @@
     background-color: #1C434A;
 }
 .bg-sarcel h1 {color: #FFE600;}
+
+* {
+    padding: 0;
+    margin: 0;
+  }
+  
+  body {
+    overflow-x: hidden;
+    background: #fed5c8;
+  }

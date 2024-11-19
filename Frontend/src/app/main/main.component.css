@@ -1,3 +1,13 @@
+@font-face {
+  font-family: 'Wallpoet';
+  src: url(/assets/fonts/wallpoet-regular.ttf);
+}
+
+@font-face {
+  font-family: 'Harabara';
+  src: url(/assets/fonts/harabara-regular.ttf);
+}
+
 .bg-sarcel {
     background-color: #1C434A;
 }
@@ -7,8 +17,60 @@
     padding: 0;
     margin: 0;
   }
-  
-  body {
-    overflow-x: hidden;
-    background: #fed5c8;
+
+.card {
+  max-width: 330px; 
+  border-radius: 20px; 
+  transition: transform 0.3s ease, 
+}
+  .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   }
+
+  .bg-silver {
+    background-color: #C0C0C0;
+  }
+
+  .bg-gold {
+    background-color: #FFD700;
+  }
+
+  .btn-outline-primary {
+    color: #484f57;
+    border-color: #000000;
+  }
+
+  .btn-outline-primary:hover {
+    background-color: #000000;
+    color: white;
+  }
+
+  .btn-outline-dark {
+    color: #343a40;
+    border-color: #343a40;
+  }
+
+  .btn-outline-dark:hover {
+    background-color: #343a40;
+    color: white;
+  }
+
+.join {
+  font-size: 4.5em;
+    color: #FFE600;
+    font-family: 'Harabara', sans-serif;
+  }
+
+.text-yellow {
+  color: #FFE600;
+}
+
+.findUs h1 {
+  font-family: "Harabara", sans-serif;
+  font-size: 6em;
+}
+
+.findUs p {
+  font-size: 1.5em;
+}

@@ -1,0 +1,164 @@
+@font-face {
+    font-family: 'Wallpoet';
+    src: url(/assets/fonts/wallpoet-regular.ttf);
+}
+
+@font-face {
+    font-family: 'Harabara';
+    src: url(/assets/fonts/harabara-regular.ttf);
+}
+
+.menubtn {
+    position: fixed;
+    right: 5vh;
+}
+
+button {
+    font-size: 2.5em;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+header {
+    user-select: none;
+}
+
+img {
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+}
+
+.bi {
+    position: absolute;
+    top: 7.5vh;
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
+}
+
+.brand {
+    width: fit-content;
+}
+
+.brandBox {
+    margin-top: 5vh;
+    margin-left: 5vh;
+    font-size: 10vh;
+    font-family: 'Harabara', sans-serif;
+    color: #ffd700;
+}
+
+.subBrand {
+    font-size: 3vh;
+    text-align: left;
+    width: fit-content;
+}
+
+.text-yellow {
+    color: #ffd700;
+}
+
+.devise {
+    font-family: 'Harabara', sans-serif;
+    font-size: 6vh;
+}
+
+p {
+    opacity: 60%;
+    font-size: 3vh;
+    position: relative;
+    bottom: 1vh;
+}
+
+.arrowDown {
+    font-family: 'Wallpoet', sans-serif;
+    font-size: 10vh;
+    color: #ffd700;
+}
+
+.flash {
+    animation-duration: 2s;
+    animation-name: flash;
+    animation-iteration-count: infinite;
+    transition: none;
+}
+
+.flash:hover {
+    animation-play-state: paused;
+    opacity: 1;
+}
+
+.bannerHeight {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.discover {
+    position: relative;
+    margin-top: 1vh;
+    text-align: center;
+}
+
+.discover:hover {
+    opacity: 1;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+.menu {
+    font-family: "Harabara", sans-serif;
+    padding: 2vh;
+}
+
+.menu ul {
+    background-color: transparent;
+    font-family: 'Wallpoet', sans-serif;
+    list-style: none;
+}
+
+.menu ul li a:hover{
+    background-color: #1C434A;
+}
+
+ @keyframes flash {
+    0% { opacity: 1; }
+    40% { opacity: 0; }
+    100% { opacity: 1; }
+} 
+
+@media (max-width: 767px) {
+    .subBrand {
+        font-size: 2vh;
+    }
+    .menubtn {
+        position: relative;
+    }
+    .devise {
+        font-size: 4vh;
+    }
+
+    p {
+        font-size: 0.7em;
+    }
+    .menu ul li {
+        opacity: 100%;
+    }
+
+    .menu {
+        font-size: 0.8em;
+        display: flex;
+        justify-content: end;
+        padding-top: 7vh;
+    }
+}
+
+.bg-sarcel {
+    background-color: #1C434A;
+}

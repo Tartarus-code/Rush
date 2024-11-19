@@ -1,0 +1,28 @@
+<app-header></app-header>
+<div class="container my-5 text-white">
+    <div class="bg-sarcel rounded-4 p-4 shadow">
+      <h1 class="text-center mb-4">Contactez-nous</h1>
+      <form action="votre_action.php" method="POST">
+        <div class="mb-3">
+          <label for="name" class="form-label">Nom complet</label>
+          <input type="text" class="form-control" id="name" name="name" placeholder="Entrez votre nom" required>
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Adresse e-mail</label>
+          <input type="email" class="form-control" id="email" name="email" placeholder="Entrez votre e-mail" required>
+        </div>
+        <div class="mb-3">
+          <label for="subject" class="form-label">Sujet</label>
+          <input type="text" class="form-control" id="subject" name="subject" placeholder="Objet de votre message" required>
+        </div>
+        <div class="mb-3">
+          <label for="message" class="form-label">Message</label>
+          <textarea class="form-control" id="message" name="message" rows="5" placeholder="Votre message..." required></textarea>
+        </div>
+        <div class="text-center">
+          <button type="submit" class="btn btn-outline-warning btn-lg">Envoyer</button>
+        </div>
+      </form>
+    </div>
+  </div>
+<app-footer></app-footer>

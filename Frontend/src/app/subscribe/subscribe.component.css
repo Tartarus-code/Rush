@@ -1,0 +1,14 @@
+.bg-sarcel {
+    background-color: #1C434A;
+  }
+  
+  .btn-outline-warning {
+    color: #ffd700;
+    border-color: #ffd700;
+  }
+  
+  .btn-outline-warning:hover {
+    background-color: #ffd700;
+    color: #1C434A;
+  }
+  

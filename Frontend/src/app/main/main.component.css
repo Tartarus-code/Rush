@@ -28,6 +28,10 @@
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   }
 
+  .card img {
+    height: 35vh;
+  }
+
   .bg-silver {
     background-color: #C0C0C0;
   }
@@ -66,7 +70,7 @@
   color: #FFE600;
 }
 
-.findUs h1 {
+h1 {
   font-family: "Harabara", sans-serif;
   font-size: 6em;
 }

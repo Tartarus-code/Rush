@@ -33,6 +33,7 @@ header {
 .menubtn {
     position: fixed;
     right: 5vh;
+    font-size: 2.5em;
 }
 
 .menu {
@@ -42,11 +43,14 @@ header {
 }
 
 .menu ul {
+    background-color: transparent;
+    font-family: 'Wallpoet', sans-serif;
     list-style: none;
 }
 
-.menu ul li a:hover {
-    background-color: #1C434A;
+.menu ul li a:hover{
+    background-color: transparent;
+    color: white;
 }
 
 /* Branding and text styles */

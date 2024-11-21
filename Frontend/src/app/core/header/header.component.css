@@ -1,14 +1,12 @@
-/* Fonts */
 @font-face {
     font-family: 'Wallpoet';
     src: url(/assets/fonts/wallpoet-regular.ttf);
-}
-
-@font-face {
+  }
+  
+  @font-face {
     font-family: 'Harabara';
-    src: url(/assets/fonts/harabara-regular.ttf);
-}
-
+    src: url(/assets/fonts/harabara-mais-bold.otf);
+  }
 
 /* Global styles */
 body, html {

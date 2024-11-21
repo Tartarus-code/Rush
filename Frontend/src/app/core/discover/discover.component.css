@@ -1,13 +1,5 @@
-@font-face {
-    font-family: 'Wallpoet';
-    src: url(/assets/fonts/wallpoet-regular.ttf);
-}
 
-@font-face {
-    font-family: 'Harabara';
-    src: url(/assets/fonts/harabara-regular.ttf);
-}
-
+@import url(../../app.component.css);
 .menubtn {
     position: fixed;
     right: 5vh;
@@ -156,8 +148,4 @@ p {
         justify-content: end;
         padding-top: 7vh;
     }
-}
-
-.bg-sarcel {
-    background-color: #1C434A;
 }

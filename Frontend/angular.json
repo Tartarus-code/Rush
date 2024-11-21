@@ -21,13 +21,8 @@
             ],
             "tsConfig": "tsconfig.app.json",
             "assets": [
-              "src/favico",
-              "./src/assets/",
-              {
-                "glob": "**/*",
-                "input": "public",
-                "output": "src/assets"
-              }
+              "src/favicon.ico",
+              "src/assets/"
             ],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
@@ -90,8 +85,8 @@
             "tsConfig": "tsconfig.spec.json",
             "assets": [
               {
-                "glob": "**/*",
-                "input": "public"
+              "glob": "**/*", 
+              "input": "src/assets/fonts/", "output": "/assets/fonts/"
               }
             ],
             "styles": [

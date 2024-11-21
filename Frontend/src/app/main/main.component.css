@@ -1,22 +1,11 @@
-@font-face {
-  font-family: 'Wallpoet';
-  src: url(/assets/fonts/wallpoet-regular.ttf);
-}
-
-@font-face {
-  font-family: 'Harabara';
-  src: url(/assets/fonts/harabara-regular.ttf);
-}
+@import url(../app.component.css);
 
 .bg-sarcel {
     background-color: #1C434A;
 }
 .bg-sarcel h1 {color: #FFE600;}
 
-* {
-    padding: 0;
-    margin: 0;
-  }
+
 
 .card {
   max-width: 330px; 

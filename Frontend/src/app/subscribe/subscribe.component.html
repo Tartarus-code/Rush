@@ -5,9 +5,18 @@
     <form action="inscription_action.php" method="POST">
       <!-- Nom complet -->
       <div class="mb-3">
-        <label for="fullname" class="form-label">Nom complet</label>
-        <input type="text" class="form-control" id="fullname" name="fullname" placeholder="Entrez votre nom complet" required>
+        <label for="fullname" class="form-label">Nom</label>
+        <input type="text" class="form-control" id="fullname" name="name" placeholder="Entrez votre nom" required>
       </div>
+      <div class="mb-3">
+        <label for="fullname" class="form-label">Prenom</label>
+        <input type="text" class="form-control" id="fullname" name="prenom" placeholder="Entrez votre prénom" required>
+      </div>
+      <div class="mb-3">
+        <label for="dateNaissance" class="form-label">Date de naissance</label>
+        <input type="date" class="form-control" id="dateNaissance" name="dateNaissance" placeholder="Entrez votre date de naissance" required>
+      </div>
+      
 
       <!-- Adresse e-mail -->
       <div class="mb-3">
@@ -27,15 +36,9 @@
         <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" placeholder="Confirmez votre mot de passe" required>
       </div>
 
-      <!-- Choix de l'abonnement -->
-      <div class="mb-3">
-        <label for="subscription" class="form-label">Type d'abonnement</label>
-        <select class="form-select" id="subscription" name="subscription" required>
-          <option value="">Choisissez un abonnement</option>
-          <option value="basic">Basic</option>
-          <option value="premium">Premium</option>
-          <option value="vip">VIP</option>
-        </select>
+      <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="terms" name="terms" required>
+        <label class="form-check-label" for="terms">J'accepte d'être contacter par SMS</label>
       </div>
 
       <!-- Case à cocher -->

@@ -1,4 +1,12 @@
-@import url(../app.component.css);
+@font-face {
+  font-family: 'Wallpoet';
+  src: url(/assets/fonts/wallpoet-regular.ttf);
+}
+
+@font-face {
+  font-family: 'Harabara';
+  src: url(/assets/fonts/harabara-mais-bold.otf);
+}
 
 .bg-sarcel {
     background-color: #1C434A;

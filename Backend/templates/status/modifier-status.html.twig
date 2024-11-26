@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello StatusController!{% endblock %}
+
+{% block body %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6 mx-auto mt-5">
+            {% for message in app.flashes('success') %}
+                <div class="alert alert-success">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-6 mx-auto mt-5">
+            {{form_start(form)}}
+            <label for="form-nomUtilisateu" class="form-label">Libéllé du status</label>
+            {{form_row(form.libStatus)}}
+            {{form_row(form.save)}}
+            {{form_end(form)}}
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock %}

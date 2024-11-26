@@ -2,31 +2,30 @@
 
 namespace App\Controller;
 
-use App\Entity\TypeAbonnement;
-use App\Form\TypeAbonnementType;
+use App\Entity\Cours;
+use App\Form\CoursType;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
-class TypeAbonnementController extends AbstractController
+class CoursController extends AbstractController
 {
-    #[Route('/abonnement', name: 'app_type_abonnement')]
+    #[Route('/cours', name: 'app_Cours')]
     public function index(Request $request, EntityManagerInterface $manager): Response
     {
-        $abonnement = new TypeAbonnement();
-        $form = $this->createForm(TypeAbonnementType::class, $abonnement);
+        $cours = new Cours();
+        $form = $this->createForm(CoursType::class, $cours);
         $form->handleRequest($request);
 
         if($form->isSubmitted() && $form->isValid()) {
 
-            $manager->persist($abonnement);
+            $manager->persist($cours);
             $manager->flush();
-            $this->addFlash('success', 'Bravo, le status a été enregistrée !');
         }
-        return $this->render('type_abonnement/index.html.twig', [
-            'controller_name' => 'AbonnementTypeController',
+        return $this->render('cours/index.html.twig', [
+            'controller_name' => 'CoursController',
             'form' => $form->createView(),
         ]);
     }

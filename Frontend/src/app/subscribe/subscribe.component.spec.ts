@@ -1,23 +1,29 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { Component } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
 
-import { SubscribeComponent } from './subscribe.component';
+export class AppComponent {
+  userForm: FormGroup;
 
-describe('SubscribeComponent', () => {
-  let component: SubscribeComponent;
-  let fixture: ComponentFixture<SubscribeComponent>;
+  constructor(private fb: FormBuilder, private http: HttpClient) {
+    this.userForm = this.fb.group({
+      nom: [''],
+      prenom: [''],
+      email: [''],
+      password: [''],
+      dateNaissance: [''],
+      numTelephone: [''],
+      isNotifSms: [''],
+    });
+  }
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [SubscribeComponent]
-    })
-    .compileComponents();
-
-    fixture = TestBed.createComponent(SubscribeComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
-
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
+  onSubmit() {
+    const formData = this.userForm.value;
+    this.http.post('http://localhost:8000/api/user', formData)
+      .subscribe(response => {
+        console.log('Données envoyées avec succès', response);
+      }, error => {
+        console.error('Erreur lors de l\'envoi des données', error);
+      });
+  }
+}

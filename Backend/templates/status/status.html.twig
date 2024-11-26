@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Status Form{% endblock %}
+
+{% block body %}
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6 mx-auto mt-5">
+            <h1>Mes status</h1>
+            <ul>
+                {% for status in mesStatus %}
+                    <li>
+                        {{ status.idstatus }} - {{ status.libStatus }} - {{path ('app_supprimer_status', {'id' : status.idstatus} )}}
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    <div class="col-lg-6 mx-auto mt-5">
+        <a href="{{ path('app_creer_status') }}" type="button" class="btn btn-primary">Ajouter</a>
+    </div>
+</div>
+{% endblock %}

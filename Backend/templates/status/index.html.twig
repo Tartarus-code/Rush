@@ -1,11 +1,33 @@
 {% extends 'base.html.twig' %}
-
-{% block title %}Status Form{% endblock %}
-
+{% block title %}Hello StatusController!{% endblock %}
 {% block body %}
-    <div>Créer un nouveau Status</div>
-
-    {{ form_start(form) }}
-        {{ form_widget(form) }}
-    {{ form_end(form) }}
+<div class="container">
+    <div class="row">
+        <div class="row">
+        <div class="col-lg-6 mx-auto mt-5">
+            {% for message in app.flashes('success') %}
+                <div class="alert alert-success">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+        <div class="col-lg-6 mx-auto mt-5">
+            <h1>Mes status</h1>
+            <ul>
+                {% for status in mesStatus %}
+                    <li>{{ status.idStatus }} - {{ status.libStatus }} 
+                    - <a href="{{ path( 'app_supprimer_status', {'id' : status.idStatus} ) }}"><i class="bi bi-trash"></i></a>     
+                    - <a href="{{ path( 'app_modifier_status', {'id' : status.idStatus} ) }}"><i class="bi bi-pen"></i></a> 
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-6 mx-auto mt-5">
+            <a href="{{path('app_creer_status')}}" class="btn btn-success">Ajouter</a>
+        </div>
+    </div>
+</div>
 {% endblock %}

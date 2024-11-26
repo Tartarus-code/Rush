@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Abonnement Form{% endblock %}
+
+{% block body %}
+    <div>Créer un nouveau type d'abonnement</div>
+
+    {{ form_start(form) }}
+        {{ form_widget(form) }}
+    {{ form_end(form) }}
+{% endblock %}

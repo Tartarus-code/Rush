@@ -39,12 +39,5 @@
  /* Changer la couleur de fond et la couleur du texte lors de la sélection */
 ::selection {
   background-color: #ffd700;  /* Couleur de fond de la sélection */
-  color: black; /* Couleur du texte de la sélection */
+  color: #1C434A; /* Couleur du texte de la sélection */
 }
-
-/* Pour les éléments avec du texte spécifique */
-::moz-selection {
-  background-color: #ffd700;  /* Couleur de fond pour Firefox */
-  color: black; /* Couleur du texte pour Firefox */
-}
-

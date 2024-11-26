@@ -1,47 +1,55 @@
 <app-header></app-header>
-<div class="container my-5 text-white">
+<div class="container my-5 text-white col-lg-12">
   <div class="bg-sarcel rounded-4 p-4 shadow">
     <h1 class="text-center mb-4">Inscrivez-vous</h1>
     <form action="inscription_action.php" method="POST">
-      <!-- Nom complet -->
-      <div class="mb-3">
-        <label for="fullname" class="form-label">Nom</label>
-        <input type="text" class="form-control" id="fullname" name="name" placeholder="Entrez votre nom" required>
-      </div>
-      <div class="mb-3">
-        <label for="fullname" class="form-label">Prenom</label>
-        <input type="text" class="form-control" id="fullname" name="prenom" placeholder="Entrez votre prénom" required>
-      </div>
-      <div class="mb-3">
+      <!-- Nom et Prénom -->
+      <div class="row mb-3">
+        <div class="col-lg-5">
+          <label for="fullname" class="form-label">Nom</label>
+          <input type="text" class="form-control" id="fullname" name="name" placeholder="Entrez votre nom" required>
+        </div>
+        <div class="col-lg-5">
+          <label for="prenom" class="form-label">Prénom</label>
+          <input type="text" class="form-control" id="prenom" name="prenom" placeholder="Entrez votre prénom" required>
+        </div>
+              <!-- Date de naissance -->
+      <div class="mb-3 col-lg-2">
         <label for="dateNaissance" class="form-label">Date de naissance</label>
         <input type="date" class="form-control" id="dateNaissance" name="dateNaissance" placeholder="Entrez votre date de naissance" required>
       </div>
-      
-
-      <!-- Adresse e-mail -->
-      <div class="mb-3">
-        <label for="email" class="form-label">Adresse e-mail</label>
-        <input type="email" class="form-control" id="email" name="email" placeholder="Entrez votre adresse e-mail" required>
       </div>
 
-      <!-- Mot de passe -->
-      <div class="mb-3">
-        <label for="password" class="form-label">Mot de passe</label>
-        <input type="password" class="form-control" id="password" name="password" placeholder="Créez un mot de passe" required>
+      <!-- Adresse e-mail et Numéro de téléphone -->
+      <div class="row mb-3">
+        <div class="col-lg-5">
+          <label for="email" class="form-label">Adresse e-mail</label>
+          <input type="email" class="form-control" id="email" name="email" placeholder="Entrez votre adresse e-mail" required>
+        </div>
+        <div class="col-lg-5">
+          <label for="tel" class="form-label">Numéro de téléphone</label>
+          <input type="text" class="form-control" id="tel" name="tel" placeholder="Entrez votre numéro de téléphone" required>
+        </div>
       </div>
 
-      <!-- Confirmation du mot de passe -->
-      <div class="mb-3">
-        <label for="confirmPassword" class="form-label">Confirmez le mot de passe</label>
-        <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" placeholder="Confirmez votre mot de passe" required>
-      </div>
-
-      <div class="mb-3 form-check">
-        <input type="checkbox" class="form-check-input" id="terms" name="terms" required>
-        <label class="form-check-label" for="terms">J'accepte d'être contacter par SMS</label>
+      <!-- Mot de passe et confirmation -->
+      <div class="row mb-3">
+        <div class="col-lg-5">
+          <label for="password" class="form-label">Mot de passe</label>
+          <input type="password" class="form-control" id="password" name="password" placeholder="Créez un mot de passe" required>
+        </div>
+        <div class="col-lg-5">
+          <label for="confirmPassword" class="form-label">Confirmez le mot de passe</label>
+          <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" placeholder="Confirmez votre mot de passe" required>
+        </div>
       </div>
 
       <!-- Case à cocher -->
+      <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="smsConsent" name="smsConsent" required>
+        <label class="form-check-label" for="smsConsent">J'accepte d'être contacté par SMS et de recevoir des notifications liés à Rush - Fitness Club</label>
+      </div>
+
       <div class="mb-3 form-check">
         <input type="checkbox" class="form-check-input" id="terms" name="terms" required>
         <label class="form-check-label" for="terms">J'accepte les <a href="#" class="text-warning">conditions générales</a></label>

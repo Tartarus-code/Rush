@@ -1,0 +1,28 @@
+@import url(../app.component.css);
+@font-face {
+    font-family: 'Wallpoet';
+    src: url(/assets/fonts/wallpoet-regular.ttf);
+  }
+  
+  @font-face {
+    font-family: 'Harabara';
+    src: url(/assets/fonts/harabara-mais-bold.otf);
+  }
+
+ /* Changer la couleur de fond et la couleur du texte lors de la sélection */
+ ::selection {
+    background-color: #ffd700;  /* Couleur de fond de la sélection */
+    color: black; /* Couleur du texte de la sélection */
+  }
+  
+  /* Pour les éléments avec du texte spécifique */
+  ::moz-selection {
+    background-color: #ffd700;  /* Couleur de fond pour Firefox */
+    color: black; /* Couleur du texte pour Firefox */
+  }
+  
+  
+  h1 {
+    font-family: 'Harabara', sans-serif;
+    color: #ffd700;
+  }

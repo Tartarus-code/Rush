@@ -1,0 +1,44 @@
+@font-face {
+    font-family: 'Wallpoet';
+    src: url(/assets/fonts/wallpoet-regular.ttf);
+  }
+  
+  @font-face {
+    font-family: 'Harabara';
+    src: url(/assets/fonts/harabara-mais-bold.otf);
+  }
+  .bg-sarcel {
+      background-color: #1C434A;
+    }
+    
+    .btn-outline-warning {
+      color: #ffd700;
+      border-color: #ffd700;
+    }
+    
+    .btn-outline-warning:hover {
+      background-color: #ffd700;
+      color: #1C434A;
+    }
+    
+  
+    h1 {
+      font-family: 'Harabara', sans-serif;
+      color: #ffd700;
+    }
+  
+    .form-check-input {
+      background-color: #1C434A;
+      border-color:#ffd700;
+    }
+  .form-check-input:checked { 
+    background-color: #ffd700; 
+    border-color: #ffd700;
+   }
+  
+   /* Changer la couleur de fond et la couleur du texte lors de la sélection */
+  ::selection {
+    background-color: #ffd700;  /* Couleur de fond de la sélection */
+    color: #1C434A; /* Couleur du texte de la sélection */
+  }
+  

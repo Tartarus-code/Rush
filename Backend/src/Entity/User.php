@@ -5,12 +5,15 @@ namespace App\Entity;
 use App\Repository\UserRepository;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\PasswordHasher\Hasher\PasswordHasherAwareInterface;
+use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
+use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Validator\Constraints as Assert;
 
 #[ORM\Entity(repositoryClass: UserRepository::class)]
 #[ORM\Table(name: 'user')]
 #[ORM\HasLifecycleCallbacks]
-class User {
+class User implements UserInterface, PasswordAuthenticatedUserInterface, PasswordHasherAwareInterface{
 
     #[ORM\Id]
     #[ORM\GeneratedValue]
@@ -81,9 +84,6 @@ class User {
         $this->email = $email;
     }
 
-    public function getPassword(): ?string {
-        return $this->password;
-    }
 
     public function setPassword(?string $password): void {
         $this->password = $password;
@@ -128,4 +128,34 @@ class User {
     public function setCodeRole(?string $code_role): void {
         $this->codeRole = $code_role;
     }
+
+
+public function getUserIdentifier(): string
+{
+    return (string) $this->email;
+}
+
+public function getPassword(): ?string {
+    return $this->password;
+}
+
+public function getSalt(): ?string
+{
+    return null;
+}
+
+public function eraseCredentials(): void
+{
+}
+
+public function getPasswordHasherName(): ?string
+{
+    return null;
+}
+
+public function getRoles(): array
+{
+    $role = $this->codeRole;
+    return array($role);
+}
 }

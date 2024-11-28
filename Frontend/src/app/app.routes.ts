@@ -3,6 +3,7 @@ import { ContactComponent } from './contact/contact.component';
 import { MainComponent } from './main/main.component';
 import { SubscribeComponent } from './subscribe/subscribe.component';
 import { TeamComponent } from './team/team.component';
+import { ConnectComponent } from './connect/connect.component';
 
 
 export const routes: Routes = [
@@ -10,4 +11,5 @@ export const routes: Routes = [
     { path: 'contact', component: ContactComponent } ,
     { path: 'subscribe', component: SubscribeComponent},
     { path: 'team', component: TeamComponent},
+    { path: 'connect', component: ConnectComponent },
 ];
